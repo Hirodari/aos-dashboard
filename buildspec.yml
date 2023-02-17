@@ -1,0 +1,15 @@
+version: 2.0
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+  pre_build:
+    commands:
+      - echo checking python version
+      - python --version
+      - echo making our scripts executable
+      - chmod +x build-image.sh push-image.sh
+  build:
+    commands:
+      - source push-image.sh
