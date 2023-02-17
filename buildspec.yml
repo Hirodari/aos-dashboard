@@ -9,7 +9,6 @@ phases:
       - echo checking python version
       - python --version
       - echo making our scripts executable
-      - chmod +x build-image.sh push-image.sh
   build:
     commands:
-      - source push-image.sh
+      - echo "nigga hit'em up"
