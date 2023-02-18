@@ -9,7 +9,6 @@ set -eu
 # sudo systemctl enable docker
 
 #  build docker image
-echo "building the container aos"
 docker build -t $DOCKER_USERNAME/$IMAGE_TAG .
 # login to your docker hub account
 # cat ~/mypassword.txt | sudo docker login --username hirodaridevdock --password-stdin

@@ -12,4 +12,5 @@ phases:
       - bash build_docker_image.sh
   build:
     commands:
-      - docker run -p 8080:5201 $DOCKER_USERNAME/$IMAGE_TAG 
+      - echo "launching the terminal"
+      - docker run -p 8080:5201 $DOCKER_USERNAME/$IMAGE_TAG
