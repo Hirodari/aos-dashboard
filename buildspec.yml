@@ -8,7 +8,8 @@ phases:
     commands:
       - echo checking python version
       - python --version
-      - echo making our scripts executable
+      - echo "building the container"
+      - bash build_docker_image.sh
   build:
     commands:
-      - echo "nigga hit'em up"
+      - docker run -p 8080:5201 $DOCKER_USERNAME/$IMAGE_TAG 
