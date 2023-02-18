@@ -12,5 +12,9 @@ phases:
       - bash build_docker_image.sh
   build:
     commands:
-      - echo "launching the terminal"
-      - docker run -p 8080:5201 $DOCKER_USERNAME/$IMAGE_TAG
+      - echo "launching the container"
+      - docker run -p 8080:5201 -d $DOCKER_USERNAME/$IMAGE_TAG
+  post_build:
+    commands:
+      - echo "creating an image to our docker hub repo"
+      - bash push_image.sh
